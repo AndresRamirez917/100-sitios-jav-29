@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+form .form-group {
+  margin-bottom: 1rem;
+}
+form .form-control {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+form button {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+}
+
+.title-card {
+  color: brown;
+  font-size: 2rem;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.border-card {
+  border: 20px solid violet;
+  border-radius: 5px;
+}
+
+.title {
+  color: brown;
+  font-size: 5rem;
+  text-align: center;
+  margin: 2rem 4rem 0 0;
+}
+
+.subtitle {
+  color: brown;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+}
+
+#mainheader {
+  background: #312250;
+}
+#mainheader .logo {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-family: "Henny Penny", cursive;
+}
+#mainheader .navbar ul {
+  display: flex;
+  margin-top: 2rem;
+}
+#mainheader .navbar ul li {
+  display: inline;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+#mainheader .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#showcase {
+  background: #e0d8c1;
+  padding-bottom: 4rem;
+}
+#showcase .showcase-content {
+  width: 90%;
+  margin: 0 auto;
+}
+#showcase .showcase-left {
+  width: 90%;
+  margin: 0 auto;
+}
+#showcase .showcase-left img {
+  width: 200%;
+  margin-top: 3rem;
+  background: #e0d8c1;
+}
+#showcase .showcase-left .title {
+  font-family: "Special Elite", cursive;
+  text-transform: uppercase;
+  font-size: 5.3rem;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 300;
+}
+#showcase .showcase-rigth {
+  margin-top: 3rem;
+}
+#showcase .showcase-rigth img {
+  width: 90%;
+}
+
+#about {
+  background: #e2b034;
+}
+#about .container {
+  width: 90%;
+  margin: 0 auto;
+}
+#about .container .about-flex {
+  margin-bottom: 2rem;
+}
+#about .container .about-flex .flexbox p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+#faq {
+  background: #312250;
+}
+#faq .container {
+  width: 90%;
+  margin: 0 auto;
+}
+#faq .container p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+#faq .container .faq-container {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+#faq .container .faq-container .div {
+  padding: 1rem 1rem;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 0.06rem;
+}
+#faq .container .faq-container .div a {
+  padding: 3rem 0;
+  color: #bab4a1;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+#contact {
+  background: #e0d8c1;
+}
+#contact .container {
+  width: 70%;
+  margin: 0 auto;
+}
+#contact .container h2 {
+  margin-top: 7rem;
+}
+#contact .container form .form-group .flexbox {
+  flex: 1;
+}
+
+#footer {
+  text-align: center;
+  padding: 3rem;
+  background: violet;
+}/*# sourceMappingURL=styles.css.map */

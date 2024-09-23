@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 
 $font-stack:"Montserrat", sans-serif;
 
@@ -23,6 +27,8 @@ font-family: $font-stack;
 a {
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 ul {
@@ -32,12 +38,16 @@ ul {
 form {
     .form-group {
         margin-bottom: 1rem;
+       
     }
     .form-control {
         display: block;
         padding: 1rem;
         margin-bottom: 1rem;
         width: 100%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1rem;
     }
     button {
         width: 100%;
@@ -47,8 +57,9 @@ form {
         border: none;
         text-align: center;
         cursor: pointer;
-        padding: 5px 10px;
+        padding: 10px 10px;
         text-transform: uppercase;
+        margin-bottom: 2rem;
     }
 }
 
@@ -65,6 +76,11 @@ form {
     margin: 2rem 0;
 }
 
+.border-card {
+    border: 20px solid violet;
+    border-radius: 5px;
+}
+
 .title {
     color: brown;
     font-size: 5rem;
@@ -77,19 +93,145 @@ form {
     font-size: 2rem;
     text-align: center;
     margin: 2rem;
+    text-transform: uppercase;
 }
 
 img {
     max-width: 100%;
 }
 
-.border-card {
-    border: 3px solid violet;
+
+
+//mainheader
+#mainheader {
+    background: #312250;
+    .logo {
+        margin: 2rem 0;
+        font-size: 1.4rem;
+        font-family: 'Henny Penny', cursive;
+    }
+    .navbar {
+        ul {
+            display: flex;
+            margin-top: 2rem;
+            li {
+                display: inline;
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+//showcase
+#showcase {
+    background: #e0d8c1;
+    padding-bottom: 4rem;
+   .showcase-content {
+    width: 90%;
+    margin: 0 auto;
+   }
+    .showcase-left {
+        width: 90%;
+        margin: 0 auto;
+        img {
+           width: 200%;
+    margin-top: 3rem;
+           background: #e0d8c1;
+        }
+        .title {
+           
+            font-family: 'Special Elite', cursive;
+            text-transform: uppercase;
+            font-size:5.3rem ;
+         line-height: 100px;
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+    .showcase-rigth {
+        margin-top: 3rem;
+        img {
+            width: 90%;
+        }
+    }
+}
+
+//about
+#about {
+    background: #e2b034;
+.container {
+    width: 90%;
+    margin: 0 auto;
+    .about-flex {
+        .flexbox {
+            p {
+                margin-bottom: 1rem;
+                text-align: justify;
+            }
+        }
+        margin-bottom: 2rem;
+    }
+}
+}
+
+//faq
+#faq {
+    background: #312250;
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .faq-container {
+            margin-top: 3rem;
+            .div {
+                padding: 1rem 1rem;
+                background: white;
+                border-radius: 5px;
+                margin-bottom: 0.06rem;
+                a {
+                    padding: 3rem 0;
+                    color: #bab4a1;
+                    font-weight: bolder;
+                    font-size: 1.2rem;
+                }
+
+            }
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+//contact
+#contact {
+    background: #e0d8c1;
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        h2 {
+            margin-top: 7rem;
+        }
+        form {
+            .form-group {
+                .flexbox {
+                    flex: 1;
+                }
+            }
+        }
+    }
 }
 
 //footer
-
-.footer {
+#footer {
     text-align: center;
     padding: 3rem;
     background: violet;

@@ -1,1 +1,43 @@
-/*# sourceMappingURL=mobile.css.map */
+#mainheader .logo {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+#mainheader .navbar ul {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+#mainheader .navbar ul li {
+  text-align: center;
+}
+#mainheader .navbar .container {
+  display: block;
+}
+
+#showcase .showcase-content {
+  display: block;
+  margin: 0 auto;
+}
+#showcase .showcase-content .showcase-left .title {
+  font-size: 3rem;
+  display: block;
+  margin: 0 auto;
+}
+#showcase .showcase-content .showcase-rigth img {
+  display: block;
+  margin: 0 auto;
+}
+
+#about {
+  padding-bottom: 2rem;
+}
+#about .container .about-flex {
+  display: block;
+  margin: 0 auto;
+}
+#about .container .about-flex .flexbox:nth-child(2) .border-card, #about .container .about-flex .flexbox:nth-child(3) .border-card {
+  margin-top: 2rem;
+}/*# sourceMappingURL=mobile.css.map */

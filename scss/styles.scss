@@ -100,7 +100,12 @@ img {
     max-width: 100%;
 }
 
-
+::placeholder {
+    font-family: "Font Awesome 5 free";
+    font-weight: 600;
+    content: "\f007";
+    text-align: right;
+}
 
 //mainheader
 #mainheader {
@@ -173,6 +178,16 @@ img {
             p {
                 margin-bottom: 1rem;
                 text-align: justify;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+            h2 {
+                width: 340px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
         }
         margin-bottom: 2rem;

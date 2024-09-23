@@ -1,3 +1,20 @@
+function dataNavbar () {
+    const navData = [["#mainheader","home"], ["#about","about"], ["#faq","faq"], ["#contact","contact"]];
+    //const link = ["#mainheader", "#about", "#faq", "#contact"];
+    //const liName = ["home", "about", "faq", "contact"]
+    for(i = 0; i < navData.length; i++){
+        for(j = 0; j < navData[i][j].length; i++){
+            const li = document.createRange().createContextualFragment(`
+                
+                  <li><a href="${navData[i][0]}">${navData[i][1]}</a></li>
+                
+                `)
+                const lista = document.querySelector('.lista');
+                lista.append(li)
+        }
+    }
+}
+
 async function getData() {
     const result = await fetch('https://rickandmortyapi.com/api/character');
     const character = await result.json();
@@ -32,4 +49,49 @@ async function getData() {
     });
 }
 
+const btn_validar = document.getElementById('btn-validar');
+const validar = (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const fecha = document.getElementById('fecha');
+    const hora = document.getElementById('hora');
+    const mensaje = document.getElementById('mensaje');
+    const arr = [];
+    const messageArr = ["Nombre", "Email", "Fecha", "Hora", "Mensaje"];
+    arr.push(nombre, email, fecha, hora, mensaje);
+    for(i = 0; i < arr.length; i++){
+        if(arr[i].value == ""){
+            swal({
+                title: `El campo ${messageArr[i]} no puede estar vacío`,
+                icon: "error",
+                 })
+                 return false;
+        }
+    }
+    if(!emailValido(email.value)){
+        swal({
+            title: `El campo ${messageArr[1]} no tiene el formato adecuado`,
+            icon: "error",
+             })
+             return false;
+    }
+    swal({
+        title: `Los datos fueron enviados satisfactoriamente`,
+        icon: "success",
+         })
+    nombre.value = "";
+    email.value = "";
+    fecha.value = "";
+    hora.value = "";
+    mensaje.value = "";
+    return true;
+} 
+
+const emailValido = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+btn_validar.addEventListener("click", validar)
 getData()
+dataNavbar()

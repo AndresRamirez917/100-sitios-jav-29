@@ -23,7 +23,6 @@ function dataFaq() {
             
              <div class="div">
                     <a href="madre.html">${dataMessages[i]}</a>
-                    <a href="madre.html"></a>
                 </div>
             
             `)
@@ -72,54 +71,56 @@ async function getData() {
     });
 }
 
+getData()
 
-
-const btn_validar = document.getElementById('btn-validar');
-
-const validar = (e) => {
-    e.preventDefault();
-    const nombre = document.getElementById('nombre');
-    const email = document.getElementById('email');
-    const fecha = document.getElementById('fecha');
-    const hora = document.getElementById('hora');
-    const mensaje = document.getElementById('mensaje');
-    const arr = [];
-    const messageArr = ["Nombre", "Email", "Fecha", "Hora", "Mensaje"];
-    arr.push(nombre, email, fecha, hora, mensaje);
-    for(i = 0; i < arr.length; i++){
-        if(arr[i].value == ""){
+const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
+    
+        e.preventDefault();
+        const nombre = document.getElementById('nombre');
+        const email = document.getElementById('email');
+        const fecha = document.getElementById('fecha');
+        const hora = document.getElementById('hora');
+        const mensaje = document.getElementById('mensaje');
+        const arr = [];
+        const messageArr = ["Nombre", "Email", "Fecha", "Hora", "Mensaje"];
+        arr.push(nombre, email, fecha, hora, mensaje);
+        for(i = 0; i < arr.length; i++){
+            if(arr[i].value == ""){
+                swal({
+                    title: `El campo ${messageArr[i]} no puede estar vacío`,
+                    icon: "error",
+                     })
+                     return false;
+            }
+        }
+        if(!emailValido(email.value)){
             swal({
-                title: `El campo ${messageArr[i]} no puede estar vacío`,
+                title: `El campo ${messageArr[1]} no tiene el formato adecuado`,
                 icon: "error",
                  })
                  return false;
         }
-    }
-    if(!emailValido(email.value)){
         swal({
-            title: `El campo ${messageArr[1]} no tiene el formato adecuado`,
-            icon: "error",
+            title: `Los datos fueron enviados satisfactoriamente`,
+            icon: "success",
              })
-             return false;
-    }
-    swal({
-        title: `Los datos fueron enviados satisfactoriamente`,
-        icon: "success",
-         })
-    nombre.value = "";
-    email.value = "";
-    fecha.value = "";
-    hora.value = "";
-    mensaje.value = "";
-    return true;
-} 
+        nombre.value = "";
+        email.value = "";
+        fecha.value = "";
+        hora.value = "";
+        mensaje.value = "";
+        return true;
+    
+};
+
+
 
 const emailValido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-btn_validar.addEventListener("click", validar)
-getData()
+//btn_validar.addEventListener("click", validar)
+
 dataFaq()
 dataNavbar()
 // function mensaje(){
@@ -134,8 +135,10 @@ dataNavbar()
 //     return faq_container;
 // }
 
-// const link = document.querySelector('.lok');
-// link.addEventListener("click", getData)
+//  const link = document.querySelector('.lok').onClick = () => {
+    
+//      link.addEventListener("click", getData)
+//  };
 
 
 

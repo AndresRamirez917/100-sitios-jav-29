@@ -18,6 +18,7 @@ function dataNavbar () {
 
 function dataFaq() {
     const dataMessages = ["what is the day of the dead?", "what is an ofrenda", "why in mexico", "what time is?", "there are zombies?"]
+    
     for(i = 0; i < dataMessages.length; i++){
         const faqA = document.createRange().createContextualFragment(`
             
@@ -28,12 +29,9 @@ function dataFaq() {
             `)
             const faq_container = document.querySelector('.faq-container');
             faq_container.append(faqA)
-            //const mensaje = dataMessages[i]
         }
         return console.log("gonorrea")
 }
-
-
 
 async function getData() {
     const result = await fetch('https://rickandmortyapi.com/api/character');
@@ -66,8 +64,6 @@ async function getData() {
         function randomData(min, max){
             return Math.floor(Math.random() * (max - min + 1) + min)
         }
-        //const data = jsonArr[randIndex][8][1];
-        //return data;
     });
 }
 
@@ -113,32 +109,14 @@ const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
     
 };
 
-
-
 const emailValido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-//btn_validar.addEventListener("click", validar)
-
 dataFaq()
 dataNavbar()
-// function mensaje(){
-//     const mensaje = console.log("madre")
-//     const element = document.createRange().createContextualFragment(`
-        
-//         <p>madre</p>
-        
-//         `)
-//         const faq_container = document.querySelector('.faq-container');
-//         faq_container.append(element)
-//     return faq_container;
-// }
 
-//  const link = document.querySelector('.lok').onClick = () => {
-    
-//      link.addEventListener("click", getData)
-//  };
+
 
 
 

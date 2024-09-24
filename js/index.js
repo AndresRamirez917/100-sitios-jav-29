@@ -15,6 +15,7 @@ function dataNavbar () {
     }
 }
 
+
 function dataFaq() {
     const dataMessages = ["what is the day of the dead?", "what is an ofrenda", "why in mexico", "what time is?", "there are zombies?"]
     for(i = 0; i < dataMessages.length; i++){
@@ -71,9 +72,10 @@ async function getData() {
     });
 }
 
-getData()
-dataFaq()
+
+
 const btn_validar = document.getElementById('btn-validar');
+
 const validar = (e) => {
     e.preventDefault();
     const nombre = document.getElementById('nombre');
@@ -116,25 +118,27 @@ const emailValido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-
-function mensaje(){
-    const mensaje = console.log("madre")
-    const element = document.createRange().createContextualFragment(`
-        
-        <p>madre</p>
-        
-        `)
-        const faq_container = document.querySelector('.faq-container');
-        faq_container.append(element)
-    return faq_container;
-}
-
-const link = document.querySelector('.lok');
-link.addEventListener("click", getData)
-
-
-//mensaje()
 btn_validar.addEventListener("click", validar)
-//getData()
+getData()
+dataFaq()
 dataNavbar()
+// function mensaje(){
+//     const mensaje = console.log("madre")
+//     const element = document.createRange().createContextualFragment(`
+        
+//         <p>madre</p>
+        
+//         `)
+//         const faq_container = document.querySelector('.faq-container');
+//         faq_container.append(element)
+//     return faq_container;
+// }
+
+// const link = document.querySelector('.lok');
+// link.addEventListener("click", getData)
+
+
+
+
+
 
